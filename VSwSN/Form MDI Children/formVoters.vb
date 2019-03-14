@@ -25,7 +25,7 @@ Public Class formVoters
         End If
         Try
             Connection()
-            query = "SELECT studentID,concat(lastname,', ',firstname,' ',middlename) as studname,Code,Description,DeptName,cellnumber,address,isVoted FROM thesis.student as s, thesis.course as c, thesis.department as d WHERE d.DepartmentID=s.DepartmentID AND c.CourseID=s.CourseID AND isVoted LIKE '" & strVoted & "%' AND Lastname LIKE '" & txtBoxSearch.Text & "%' AND d.DeptCode LIKE '" & cmbFilterDept.Text & "%' AND yearlevel LIKE '" & cmbFilterLevel.Text & "%' ORDER BY Lastname, Firstname ASC "
+            query = "SELECT studentID,CONCAT(lastname,', ',firstname,' ',middlename) as studname,Code,Description,DeptName,cellnumber,address,isVoted FROM thesis.student as s, thesis.course as c, thesis.department as d WHERE d.DepartmentID=s.DepartmentID AND c.CourseID=s.CourseID AND isVoted LIKE '" & strVoted & "%' AND CONCAT(lastname,', ',firstname,' ',middlename) LIKE '" & txtBoxSearch.Text & "%' AND d.DeptCode LIKE '" & cmbFilterDept.Text & "%' AND yearlevel LIKE '" & cmbFilterLevel.Text & "%' ORDER BY Lastname, Firstname ASC "
             sqlcommand = New MySqlCommand(query, conn)
             sqlreader = sqlcommand.ExecuteReader
 

@@ -18,7 +18,7 @@ Public Class formStudent
     Public Sub LoadStudent()
         Try
             Connection()
-            query = "SELECT StudentID, CONCAT(lastname,', ', firstname,' ',middlename) as studname,cellnumber,gender,address,Code, d.DeptName, yearlevel FROM thesis.student as s, thesis.course as c, thesis.department as d WHERE d.DepartmentID=s.DepartmentID AND c.CourseID=s.CourseID AND Lastname LIKE '" & txtBoxSearch.Text & "%' AND d.DeptCode LIKE '" & cmbFilterDept.Text & "%' AND yearlevel LIKE '" & cmbFilterLevel.Text & "%' ORDER BY Lastname ASC"
+            query = "SELECT StudentID, CONCAT(lastname,', ', firstname,' ',middlename) as studname,cellnumber,gender,address,Code, d.DeptName, yearlevel FROM thesis.student as s, thesis.course as c, thesis.department as d WHERE d.DepartmentID=s.DepartmentID AND c.CourseID=s.CourseID AND CONCAT(lastname,', ', firstname,' ',middlename) LIKE '" & txtBoxSearch.Text & "%' AND d.DeptCode LIKE '" & cmbFilterDept.Text & "%' AND yearlevel LIKE '" & cmbFilterLevel.Text & "%' ORDER BY Lastname ASC"
             sqlcommand = New MySqlCommand(query, conn)
             sqlreader = sqlcommand.ExecuteReader
 

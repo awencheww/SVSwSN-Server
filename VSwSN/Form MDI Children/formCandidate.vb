@@ -18,7 +18,7 @@ Public Class formCandidate
     Public Sub LoadCandidate()
         Try
             Connection()
-            query = "SELECT CandidateID, CONCAT(Lastname, ', ', Firstname, ' ', middlename) as CanName, age, bdate, sex, Address, DeptCode, Code, PartyName, PositionName,LevelName, Votes FROM thesis.Candidate as C, thesis.Department as D, thesis.Course as Co, thesis.Party as P, voting_level as L, thesis.Positions as Po WHERE C.PositionID = Po.PositionID AND Po.levelID = L.LevelID AND C.DepartmentID = D.DepartmentID AND C.CourseID = Co.CourseID AND C.PartyID = P.PartyID AND Lastname LIKE '" & txtBoxSearch.Text & "%' AND LevelName LIKE '" & cmbFilterVotingLevel.Text & "%' AND D.DeptCode LIKE '" & cmbFilterDept.Text & "%' AND yearlevel LIKE '" & cmbFilterLevel.Text & "%' ORDER BY Lastname "
+            query = "SELECT CandidateID, CONCAT(Lastname, ', ', Firstname, ' ', middlename) as CanName, age, bdate, sex, Address, DeptCode, Code, PartyName, PositionName,LevelName, Votes FROM thesis.Candidate as C, thesis.Department as D, thesis.Course as Co, thesis.Party as P, voting_level as L, thesis.Positions as Po WHERE C.PositionID = Po.PositionID AND Po.levelID = L.LevelID AND C.DepartmentID = D.DepartmentID AND C.CourseID = Co.CourseID AND C.PartyID = P.PartyID AND CONCAT(Lastname, ', ', Firstname, ' ', middlename) LIKE '" & txtBoxSearch.Text & "%' AND LevelName LIKE '" & cmbFilterVotingLevel.Text & "%' AND D.DeptCode LIKE '" & cmbFilterDept.Text & "%' AND yearlevel LIKE '" & cmbFilterLevel.Text & "%' ORDER BY Lastname "
             sqlcommand = New MySqlCommand(query, conn)
             sqlreader = sqlcommand.ExecuteReader
 
