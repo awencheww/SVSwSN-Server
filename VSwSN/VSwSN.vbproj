@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CECE7BD2-E489-4712-AD75-CD2DF6A2A3B8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VSwSN.My.MyApplication</StartupObject>
+    <RootNamespace>VSwSN</RootNamespace>
+    <AssemblyName>VSwSN</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VSwSN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VSwSN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form MDI Children\AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="db_connect.vb" />
+    <Compile Include="Form MDI Children\formAccounts.Designer.vb">
+      <DependentUpon>formAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Add Update\formAddAccounts.Designer.vb">
+      <DependentUpon>formAddAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Add Update\formAddAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Add Update\formAddCandidate.Designer.vb">
+      <DependentUpon>formAddCandidate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Add Update\formAddCandidate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Add Update\formAddCourse.Designer.vb">
+      <DependentUpon>formAddCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Add Update\formAddCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Add Update\formAddDepartment.Designer.vb">
+      <DependentUpon>formAddDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Add Update\formAddDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Add Update\formAddParty.Designer.vb">
+      <DependentUpon>formAddParty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Add Update\formAddParty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Add Update\formAddPosition.Designer.vb">
+      <DependentUpon>formAddPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Add Update\formAddPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Add Update\formAddStudent.Designer.vb">
+      <DependentUpon>formAddStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Add Update\formAddStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Children\formCandidate.Designer.vb">
+      <DependentUpon>formCandidate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formCandidate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Children\formCourse.Designer.vb">
+      <DependentUpon>formCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Children\formDepartment.Designer.vb">
+      <DependentUpon>formDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Load\formLoadCourse.Designer.vb">
+      <DependentUpon>formLoadCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Load\formLoadCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Load\formLoadDepartment.Designer.vb">
+      <DependentUpon>formLoadDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Load\formLoadDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Load\formLoadLevel.Designer.vb">
+      <DependentUpon>formLoadLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Load\formLoadLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Load\formLoadParty.Designer.vb">
+      <DependentUpon>formLoadParty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Load\formLoadParty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Load\formLoadPosition.Designer.vb">
+      <DependentUpon>formLoadPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Load\formLoadPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Load\formLoadStudent.Designer.vb">
+      <DependentUpon>formLoadStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Load\formLoadStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Main\formLogin.Designer.vb">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Main\formLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Main\formMain.Designer.vb">
+      <DependentUpon>formMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Main\formMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Children\formParty.Designer.vb">
+      <DependentUpon>formParty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formParty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Children\formPosition.Designer.vb">
+      <DependentUpon>formPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Main\formProgressBar.Designer.vb">
+      <DependentUpon>formProgressBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Main\formProgressBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Children\formStudent.Designer.vb">
+      <DependentUpon>formStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Children\formVoters.Designer.vb">
+      <DependentUpon>formVoters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formVoters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form MDI Children\formSMS.Designer.vb">
+      <DependentUpon>formSMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form MDI Children\formSMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results\formDepartmentVotes.Designer.vb">
+      <DependentUpon>formDepartmentVotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Results\formDepartmentVotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results\formSSGEVotes.Designer.vb">
+      <DependentUpon>formSSGEVotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Results\formSSGEVotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results\formSSGLVotes.Designer.vb">
+      <DependentUpon>formSSGLVotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Results\formSSGLVotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pass_encrypt.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form MDI Children\AboutBox.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formAccounts.resx">
+      <DependentUpon>formAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Add Update\formAddAccounts.resx">
+      <DependentUpon>formAddAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Add Update\formAddCandidate.resx">
+      <DependentUpon>formAddCandidate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Add Update\formAddCourse.resx">
+      <DependentUpon>formAddCourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Add Update\formAddDepartment.resx">
+      <DependentUpon>formAddDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Add Update\formAddParty.resx">
+      <DependentUpon>formAddParty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Add Update\formAddPosition.resx">
+      <DependentUpon>formAddPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Add Update\formAddStudent.resx">
+      <DependentUpon>formAddStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formCandidate.resx">
+      <DependentUpon>formCandidate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formCourse.resx">
+      <DependentUpon>formCourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formDepartment.resx">
+      <DependentUpon>formDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Load\formLoadCourse.resx">
+      <DependentUpon>formLoadCourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Load\formLoadDepartment.resx">
+      <DependentUpon>formLoadDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Load\formLoadLevel.resx">
+      <DependentUpon>formLoadLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Load\formLoadParty.resx">
+      <DependentUpon>formLoadParty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Load\formLoadPosition.resx">
+      <DependentUpon>formLoadPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Load\formLoadStudent.resx">
+      <DependentUpon>formLoadStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Main\formLogin.resx">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Main\formMain.resx">
+      <DependentUpon>formMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formParty.resx">
+      <DependentUpon>formParty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formPosition.resx">
+      <DependentUpon>formPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Main\formProgressBar.resx">
+      <DependentUpon>formProgressBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formStudent.resx">
+      <DependentUpon>formStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formVoters.resx">
+      <DependentUpon>formVoters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form MDI Children\formSMS.resx">
+      <DependentUpon>formSMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Results\formDepartmentVotes.resx">
+      <DependentUpon>formDepartmentVotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Results\formSSGEVotes.resx">
+      <DependentUpon>formSSGEVotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Results\formSSGLVotes.resx">
+      <DependentUpon>formSSGLVotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name-100.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
