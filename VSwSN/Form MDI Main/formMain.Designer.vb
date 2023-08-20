@@ -37,6 +37,25 @@ Partial Class formMain
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.expand = New System.Windows.Forms.ToolStripButton()
+        Me.accounts = New System.Windows.Forms.ToolStripButton()
+        Me.student = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.StudentInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CourseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.candidate = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.CandidateInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PartyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PositionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.voters = New System.Windows.Forms.ToolStripButton()
+        Me.sms = New System.Windows.Forms.ToolStripButton()
+        Me.votes = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.SSGExecutiveBranchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SSGLegislativeBranchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartmentToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lists = New System.Windows.Forms.ToolStripButton()
+        Me.reports = New System.Windows.Forms.ToolStripButton()
+        Me.about = New System.Windows.Forms.ToolStripButton()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -78,25 +97,6 @@ Partial Class formMain
         Me.MidnightBlueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NavyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaddleBrownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.expand = New System.Windows.Forms.ToolStripButton()
-        Me.accounts = New System.Windows.Forms.ToolStripButton()
-        Me.student = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.StudentInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CourseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.candidate = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.CandidateInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PartyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PositionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.voters = New System.Windows.Forms.ToolStripButton()
-        Me.sms = New System.Windows.Forms.ToolStripButton()
-        Me.votes = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.SSGExecutiveBranchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SSGLegislativeBranchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DepartmentToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lists = New System.Windows.Forms.ToolStripButton()
-        Me.reports = New System.Windows.Forms.ToolStripButton()
-        Me.about = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -148,7 +148,7 @@ Partial Class formMain
         '
         Me.ToolStripStatusLabel3.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(37, 17)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(36, 17)
         Me.ToolStripStatusLabel3.Text = "Time:"
         '
         'lblTime
@@ -201,6 +201,200 @@ Partial Class formMain
         Me.ToolStrip1.Size = New System.Drawing.Size(803, 68)
         Me.ToolStrip1.TabIndex = 13
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'expand
+        '
+        Me.expand.CheckOnClick = True
+        Me.expand.ForeColor = System.Drawing.Color.White
+        Me.expand.Image = CType(resources.GetObject("expand.Image"), System.Drawing.Image)
+        Me.expand.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.expand.Name = "expand"
+        Me.expand.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.expand.Size = New System.Drawing.Size(44, 65)
+        Me.expand.ToolTipText = "View Details"
+        '
+        'accounts
+        '
+        Me.accounts.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accounts.ForeColor = System.Drawing.Color.White
+        Me.accounts.Image = CType(resources.GetObject("accounts.Image"), System.Drawing.Image)
+        Me.accounts.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.accounts.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.accounts.Name = "accounts"
+        Me.accounts.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.accounts.Size = New System.Drawing.Size(76, 64)
+        Me.accounts.Text = "Accounts"
+        Me.accounts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.accounts.ToolTipText = "Manage Accounts"
+        '
+        'student
+        '
+        Me.student.AutoSize = False
+        Me.student.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentInformationToolStripMenuItem, Me.CourseToolStripMenuItem, Me.DepartmentToolStripMenuItem})
+        Me.student.ForeColor = System.Drawing.Color.White
+        Me.student.Image = CType(resources.GetObject("student.Image"), System.Drawing.Image)
+        Me.student.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.student.Name = "student"
+        Me.student.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.student.Size = New System.Drawing.Size(79, 65)
+        Me.student.Text = "Student"
+        Me.student.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
+        Me.student.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'StudentInformationToolStripMenuItem
+        '
+        Me.StudentInformationToolStripMenuItem.Name = "StudentInformationToolStripMenuItem"
+        Me.StudentInformationToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
+        Me.StudentInformationToolStripMenuItem.Text = "&Student Info"
+        '
+        'CourseToolStripMenuItem
+        '
+        Me.CourseToolStripMenuItem.Name = "CourseToolStripMenuItem"
+        Me.CourseToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
+        Me.CourseToolStripMenuItem.Text = "&Course"
+        '
+        'DepartmentToolStripMenuItem
+        '
+        Me.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
+        Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
+        Me.DepartmentToolStripMenuItem.Text = "&Department"
+        '
+        'candidate
+        '
+        Me.candidate.AutoSize = False
+        Me.candidate.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CandidateInfoToolStripMenuItem, Me.PartyToolStripMenuItem, Me.PositionToolStripMenuItem})
+        Me.candidate.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.candidate.ForeColor = System.Drawing.Color.White
+        Me.candidate.Image = CType(resources.GetObject("candidate.Image"), System.Drawing.Image)
+        Me.candidate.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.candidate.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.candidate.Name = "candidate"
+        Me.candidate.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.candidate.Size = New System.Drawing.Size(85, 61)
+        Me.candidate.Text = "Candidate"
+        Me.candidate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.candidate.ToolTipText = "Candidate"
+        '
+        'CandidateInfoToolStripMenuItem
+        '
+        Me.CandidateInfoToolStripMenuItem.Name = "CandidateInfoToolStripMenuItem"
+        Me.CandidateInfoToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.CandidateInfoToolStripMenuItem.Text = "Candidate Info"
+        '
+        'PartyToolStripMenuItem
+        '
+        Me.PartyToolStripMenuItem.Name = "PartyToolStripMenuItem"
+        Me.PartyToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.PartyToolStripMenuItem.Text = "Party"
+        '
+        'PositionToolStripMenuItem
+        '
+        Me.PositionToolStripMenuItem.Name = "PositionToolStripMenuItem"
+        Me.PositionToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.PositionToolStripMenuItem.Text = "Position"
+        '
+        'voters
+        '
+        Me.voters.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.voters.ForeColor = System.Drawing.Color.White
+        Me.voters.Image = CType(resources.GetObject("voters.Image"), System.Drawing.Image)
+        Me.voters.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.voters.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.voters.Name = "voters"
+        Me.voters.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.voters.Size = New System.Drawing.Size(58, 64)
+        Me.voters.Text = "Voters"
+        Me.voters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.voters.ToolTipText = "Manage Voters"
+        '
+        'sms
+        '
+        Me.sms.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sms.ForeColor = System.Drawing.Color.White
+        Me.sms.Image = CType(resources.GetObject("sms.Image"), System.Drawing.Image)
+        Me.sms.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.sms.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.sms.Name = "sms"
+        Me.sms.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.sms.Size = New System.Drawing.Size(46, 64)
+        Me.sms.Text = "SMS"
+        Me.sms.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.sms.ToolTipText = "Manage Text Messaging"
+        '
+        'votes
+        '
+        Me.votes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SSGExecutiveBranchToolStripMenuItem, Me.SSGLegislativeBranchToolStripMenuItem, Me.DepartmentToolStripMenuItem1})
+        Me.votes.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.votes.ForeColor = System.Drawing.Color.White
+        Me.votes.Image = CType(resources.GetObject("votes.Image"), System.Drawing.Image)
+        Me.votes.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.votes.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.votes.Name = "votes"
+        Me.votes.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.votes.Size = New System.Drawing.Size(62, 64)
+        Me.votes.Text = "Votes"
+        Me.votes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.votes.ToolTipText = "Manage Votes"
+        '
+        'SSGExecutiveBranchToolStripMenuItem
+        '
+        Me.SSGExecutiveBranchToolStripMenuItem.Name = "SSGExecutiveBranchToolStripMenuItem"
+        Me.SSGExecutiveBranchToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.SSGExecutiveBranchToolStripMenuItem.Text = "SSG Executive Branch"
+        '
+        'SSGLegislativeBranchToolStripMenuItem
+        '
+        Me.SSGLegislativeBranchToolStripMenuItem.Name = "SSGLegislativeBranchToolStripMenuItem"
+        Me.SSGLegislativeBranchToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.SSGLegislativeBranchToolStripMenuItem.Text = "SSG Legislative Branch"
+        '
+        'DepartmentToolStripMenuItem1
+        '
+        Me.DepartmentToolStripMenuItem1.Name = "DepartmentToolStripMenuItem1"
+        Me.DepartmentToolStripMenuItem1.Size = New System.Drawing.Size(211, 22)
+        Me.DepartmentToolStripMenuItem1.Text = "Department"
+        '
+        'lists
+        '
+        Me.lists.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lists.ForeColor = System.Drawing.Color.White
+        Me.lists.Image = CType(resources.GetObject("lists.Image"), System.Drawing.Image)
+        Me.lists.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.lists.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.lists.Name = "lists"
+        Me.lists.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.lists.Size = New System.Drawing.Size(78, 64)
+        Me.lists.Text = "View Lists"
+        Me.lists.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.lists.ToolTipText = "View all  Lists"
+        '
+        'reports
+        '
+        Me.reports.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reports.ForeColor = System.Drawing.Color.White
+        Me.reports.Image = CType(resources.GetObject("reports.Image"), System.Drawing.Image)
+        Me.reports.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.reports.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.reports.Name = "reports"
+        Me.reports.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.reports.Size = New System.Drawing.Size(67, 64)
+        Me.reports.Text = "Reports"
+        Me.reports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.reports.ToolTipText = "Manage Reports"
+        '
+        'about
+        '
+        Me.about.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.about.ForeColor = System.Drawing.Color.White
+        Me.about.Image = CType(resources.GetObject("about.Image"), System.Drawing.Image)
+        Me.about.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.about.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.about.Name = "about"
+        Me.about.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.about.Size = New System.Drawing.Size(58, 64)
+        Me.about.Text = "About"
+        Me.about.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.about.ToolTipText = "About SMS Voting System"
         '
         'FileToolStripMenuItem
         '
@@ -474,200 +668,6 @@ Partial Class formMain
         Me.SaddleBrownToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.SaddleBrownToolStripMenuItem.Text = "&Saddle Brown"
         '
-        'expand
-        '
-        Me.expand.CheckOnClick = True
-        Me.expand.ForeColor = System.Drawing.Color.White
-        Me.expand.Image = CType(resources.GetObject("expand.Image"), System.Drawing.Image)
-        Me.expand.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.expand.Name = "expand"
-        Me.expand.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.expand.Size = New System.Drawing.Size(44, 65)
-        Me.expand.ToolTipText = "View Details"
-        '
-        'accounts
-        '
-        Me.accounts.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accounts.ForeColor = System.Drawing.Color.White
-        Me.accounts.Image = CType(resources.GetObject("accounts.Image"), System.Drawing.Image)
-        Me.accounts.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.accounts.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.accounts.Name = "accounts"
-        Me.accounts.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.accounts.Size = New System.Drawing.Size(76, 64)
-        Me.accounts.Text = "Accounts"
-        Me.accounts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.accounts.ToolTipText = "Manage Accounts"
-        '
-        'student
-        '
-        Me.student.AutoSize = False
-        Me.student.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentInformationToolStripMenuItem, Me.CourseToolStripMenuItem, Me.DepartmentToolStripMenuItem})
-        Me.student.ForeColor = System.Drawing.Color.White
-        Me.student.Image = CType(resources.GetObject("student.Image"), System.Drawing.Image)
-        Me.student.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.student.Name = "student"
-        Me.student.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.student.Size = New System.Drawing.Size(79, 65)
-        Me.student.Text = "Student"
-        Me.student.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
-        Me.student.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'StudentInformationToolStripMenuItem
-        '
-        Me.StudentInformationToolStripMenuItem.Name = "StudentInformationToolStripMenuItem"
-        Me.StudentInformationToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
-        Me.StudentInformationToolStripMenuItem.Text = "&Student Info"
-        '
-        'CourseToolStripMenuItem
-        '
-        Me.CourseToolStripMenuItem.Name = "CourseToolStripMenuItem"
-        Me.CourseToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
-        Me.CourseToolStripMenuItem.Text = "&Course"
-        '
-        'DepartmentToolStripMenuItem
-        '
-        Me.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
-        Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
-        Me.DepartmentToolStripMenuItem.Text = "&Department"
-        '
-        'candidate
-        '
-        Me.candidate.AutoSize = False
-        Me.candidate.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CandidateInfoToolStripMenuItem, Me.PartyToolStripMenuItem, Me.PositionToolStripMenuItem})
-        Me.candidate.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.candidate.ForeColor = System.Drawing.Color.White
-        Me.candidate.Image = CType(resources.GetObject("candidate.Image"), System.Drawing.Image)
-        Me.candidate.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.candidate.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.candidate.Name = "candidate"
-        Me.candidate.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.candidate.Size = New System.Drawing.Size(85, 61)
-        Me.candidate.Text = "Candidate"
-        Me.candidate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.candidate.ToolTipText = "Candidate"
-        '
-        'CandidateInfoToolStripMenuItem
-        '
-        Me.CandidateInfoToolStripMenuItem.Name = "CandidateInfoToolStripMenuItem"
-        Me.CandidateInfoToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.CandidateInfoToolStripMenuItem.Text = "Candidate Info"
-        '
-        'PartyToolStripMenuItem
-        '
-        Me.PartyToolStripMenuItem.Name = "PartyToolStripMenuItem"
-        Me.PartyToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.PartyToolStripMenuItem.Text = "Party"
-        '
-        'PositionToolStripMenuItem
-        '
-        Me.PositionToolStripMenuItem.Name = "PositionToolStripMenuItem"
-        Me.PositionToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.PositionToolStripMenuItem.Text = "Position"
-        '
-        'voters
-        '
-        Me.voters.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.voters.ForeColor = System.Drawing.Color.White
-        Me.voters.Image = CType(resources.GetObject("voters.Image"), System.Drawing.Image)
-        Me.voters.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.voters.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.voters.Name = "voters"
-        Me.voters.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.voters.Size = New System.Drawing.Size(58, 64)
-        Me.voters.Text = "Voters"
-        Me.voters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.voters.ToolTipText = "Manage Voters"
-        '
-        'sms
-        '
-        Me.sms.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sms.ForeColor = System.Drawing.Color.White
-        Me.sms.Image = CType(resources.GetObject("sms.Image"), System.Drawing.Image)
-        Me.sms.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.sms.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.sms.Name = "sms"
-        Me.sms.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.sms.Size = New System.Drawing.Size(46, 64)
-        Me.sms.Text = "SMS"
-        Me.sms.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.sms.ToolTipText = "Manage Text Messaging"
-        '
-        'votes
-        '
-        Me.votes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SSGExecutiveBranchToolStripMenuItem, Me.SSGLegislativeBranchToolStripMenuItem, Me.DepartmentToolStripMenuItem1})
-        Me.votes.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.votes.ForeColor = System.Drawing.Color.White
-        Me.votes.Image = CType(resources.GetObject("votes.Image"), System.Drawing.Image)
-        Me.votes.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.votes.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.votes.Name = "votes"
-        Me.votes.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.votes.Size = New System.Drawing.Size(62, 64)
-        Me.votes.Text = "Votes"
-        Me.votes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.votes.ToolTipText = "Manage Votes"
-        '
-        'SSGExecutiveBranchToolStripMenuItem
-        '
-        Me.SSGExecutiveBranchToolStripMenuItem.Name = "SSGExecutiveBranchToolStripMenuItem"
-        Me.SSGExecutiveBranchToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.SSGExecutiveBranchToolStripMenuItem.Text = "SSG Executive Branch"
-        '
-        'SSGLegislativeBranchToolStripMenuItem
-        '
-        Me.SSGLegislativeBranchToolStripMenuItem.Name = "SSGLegislativeBranchToolStripMenuItem"
-        Me.SSGLegislativeBranchToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.SSGLegislativeBranchToolStripMenuItem.Text = "SSG Legislative Branch"
-        '
-        'DepartmentToolStripMenuItem1
-        '
-        Me.DepartmentToolStripMenuItem1.Name = "DepartmentToolStripMenuItem1"
-        Me.DepartmentToolStripMenuItem1.Size = New System.Drawing.Size(211, 22)
-        Me.DepartmentToolStripMenuItem1.Text = "Department"
-        '
-        'lists
-        '
-        Me.lists.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lists.ForeColor = System.Drawing.Color.White
-        Me.lists.Image = CType(resources.GetObject("lists.Image"), System.Drawing.Image)
-        Me.lists.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.lists.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.lists.Name = "lists"
-        Me.lists.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.lists.Size = New System.Drawing.Size(78, 64)
-        Me.lists.Text = "View Lists"
-        Me.lists.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.lists.ToolTipText = "View all  Lists"
-        '
-        'reports
-        '
-        Me.reports.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.reports.ForeColor = System.Drawing.Color.White
-        Me.reports.Image = CType(resources.GetObject("reports.Image"), System.Drawing.Image)
-        Me.reports.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.reports.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.reports.Name = "reports"
-        Me.reports.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.reports.Size = New System.Drawing.Size(67, 64)
-        Me.reports.Text = "Reports"
-        Me.reports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.reports.ToolTipText = "Manage Reports"
-        '
-        'about
-        '
-        Me.about.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.about.ForeColor = System.Drawing.Color.White
-        Me.about.Image = CType(resources.GetObject("about.Image"), System.Drawing.Image)
-        Me.about.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.about.Margin = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.about.Name = "about"
-        Me.about.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.about.Size = New System.Drawing.Size(58, 64)
-        Me.about.Text = "About"
-        Me.about.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.about.ToolTipText = "About SMS Voting System"
-        '
         'formMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -680,6 +680,7 @@ Partial Class formMain
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.IsMdiContainer = True
         Me.KeyPreview = True
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimizeBox = False
         Me.Name = "formMain"
         Me.Padding = New System.Windows.Forms.Padding(4)

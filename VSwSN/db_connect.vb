@@ -10,7 +10,7 @@ Module db_connect
     Public Sub Connection()
         Try
             conn = New MySqlConnection
-            conn.ConnectionString = "server=localhost; userid=root; password=yahquew2411; database=thesis"
+            conn.ConnectionString = "server=localhost; userid=root; password=; database=thesis"
             conn.Open()
         Catch ex As Exception
             MsgBox(ex.Message)
